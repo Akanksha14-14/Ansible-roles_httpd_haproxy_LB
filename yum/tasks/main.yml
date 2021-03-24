@@ -1,0 +1,28 @@
+---
+# tasks file for yum
+
+- name: "create directory"
+  file:
+    state: directory
+    path: "{{ dir_path }}"
+
+- name: "mount the disk"
+  mount:
+    path: "{{ dir_path }}"
+    src: "/dev/cdrom"
+    state: mounted
+    fstype: iso9660
+
+- name: "configure yum baseOS folder"
+  yum_repository:
+    name: "cd_softwares"
+    baseurl: "{{ dir_path}}/BaseOS"
+    description: "cd softwares"
+    gpgcheck: no
+
+- name: "configure yum AppStream folder"
+  yum_repository:
+    name: "cd_softwares2"
+    baseurl: "{{ dir_path}}/AppStream"
+    description: "cd softwares"
+    gpgcheck: no
