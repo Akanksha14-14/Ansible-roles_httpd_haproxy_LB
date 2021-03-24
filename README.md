@@ -27,5 +27,5 @@ variables used :  1. dir_path:  path to mount the cdrom (example = /dvd10")
 setup.yml :  roles is excuted using this playbook
 removesetup.yml : to remove setup.yml's Playbook configuration
 
-### NOTE: if this roles exected on AWS , DO comment the YUM role in setup.yml !!!
+### NOTE: Using this roles on AWS , DO comment the YUM role in setup.yml: !!!
 
