@@ -1,0 +1,7 @@
+---
+# handlers file for mylb
+
+- name: "restart service"
+  service: 
+        name: "{{ ser_name }}"
+        state: restarted

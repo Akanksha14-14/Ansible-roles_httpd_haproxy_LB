@@ -1,0 +1,7 @@
+---
+# vars file for mylb
+
+pkg_name: "haproxy"
+dest_path: "/etc/haproxy/haproxy.cfg"
+ser_name: "haproxy"
+port: "8082"

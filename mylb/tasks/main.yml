@@ -1,0 +1,27 @@
+---  
+# tasks file for mylb
+
+- name: "install package"
+  package:
+        name: "{{ pkg_name }}"
+        state: present
+
+- name: "configuring haproxy"
+  template:
+        dest: "{{dest_path }}"
+        src: "proxy.cfg.j2"
+  notify: "restart service"
+
+- name: "start services"
+  service: 
+        name: "{{ ser_name }}"
+        state: started
+
+
+#- name: "firewall setup "
+#  firewalld: 
+        # port: "{{ port }}/tcp"
+        # state: enabled
+        # permanent: yes
+        # immediate: yes
+-
