@@ -1,0 +1,10 @@
+- hosts: localhost
+  roles: 
+#     - role: "yum"
+      - role: "mylb"
+
+
+- hosts: web 
+  roles:
+#     - role: "yum"
+      - role: "myapache"
