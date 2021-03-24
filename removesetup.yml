@@ -1,0 +1,30 @@
+- hosts: localhost 
+ 
+  tasks:
+  - name: "haproxy unistall"
+    package:
+            name: "haproxy"
+            state: absent
+
+  - name: "remove file"
+    file:
+            path: "/etc/haproxy/haproxy.cfg"
+            state: absent
+
+ 
+
+
+- hosts: web 
+ 
+  tasks:
+  - name: "httpd"
+    package:
+            name: "httpd"
+            state: absent
+
+  - name: "remove file"
+    file:
+            path: "/var/www/html/index.php"
+            state: absent
+
+ 
