@@ -1,0 +1,6 @@
+---
+# vars file for myapache
+p: "httpd"
+path: "/var/www/html"
+ser_name: "httpd"
+port: "80"

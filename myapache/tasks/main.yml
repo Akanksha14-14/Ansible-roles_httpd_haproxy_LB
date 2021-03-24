@@ -1,0 +1,24 @@
+---
+# tasks file for myapache
+- package: 
+    name: "{{ p }}"
+    state: present
+ 
+- package: 
+    name: "php"
+    state: present
+
+- copy:
+    dest: "{{ path }}/index.php"
+    src: "index.php"
+
+- service:
+    name: "{{ ser_name }}"
+    state: started
+
+#- firewalld:
+    # port: "{{ port }}/tcp"
+    # state: enabled
+    # permanent: yes
+    # immediate: yes
+
