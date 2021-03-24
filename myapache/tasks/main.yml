@@ -16,9 +16,9 @@
     name: "{{ ser_name }}"
     state: started
 
-#- firewalld:
-    # port: "{{ port }}/tcp"
-    # state: enabled
-    # permanent: yes
-    # immediate: yes
+- firewalld:
+    port: "{{ port }}/tcp"
+    state: enabled
+    permanent: yes
+    immediate: yes
 

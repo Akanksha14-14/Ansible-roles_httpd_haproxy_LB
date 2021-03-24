@@ -18,10 +18,10 @@
         state: started
 
 
-#- name: "firewall setup "
-#  firewalld: 
-        # port: "{{ port }}/tcp"
-        # state: enabled
-        # permanent: yes
-        # immediate: yes
--
+- name: "firewall setup "
+  firewalld: 
+         port: "{{ port }}/tcp"
+         state: enabled
+         permanent: yes
+         immediate: yes
+
